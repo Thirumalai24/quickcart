@@ -9,4 +9,4 @@ def register(request):
 
 def collections(request):
     category = Category.objects.filter(status=0)
-    return render(request,"shop/collections.html",{"Category": category})
+    return render(request,"shop/collections.html",{"category": category})
