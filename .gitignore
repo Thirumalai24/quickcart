@@ -17,6 +17,10 @@ db.sqlite3
 *.db
 *.sqlite3
 
+# Ignore uploaded media files
+uploads/
+media/
+
 # IDE
 .vscode/
 .idea/

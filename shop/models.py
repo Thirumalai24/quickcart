@@ -2,20 +2,19 @@ from django.db import models
 import datetime
 import os 
 
-# save filename with time
-def getFileName(request,filename):
-    now_time = datetime.now().strftime("%Y%m%d%H:%M:%S")
-    new_filename="%s%s"%(now_time,filename)
-    return os.path.join('uploads/',new_filename)
-
+# Function to generate a unique filename
+def getFileName(instance, filename):
+    now_time = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+    new_filename = f"{now_time}_{filename}"  # ✅ Unique timestamped filename
+    return os.path.join("uploads/", new_filename)  # ✅ Stored inside "uploads/" directory
 
 class Category(models.Model):
-    name = models.CharField(max_length=150,null=False, blank=False)
-    image = models.ImageField(upload_to='getFileName', blank=True, null=True)
-    description = models.TextField(max_length=500,null=False, blank=False)
-    status=models.BooleanField(default=False,help_text="0-default,1-Hidden")
-    trending =models.BooleanField(default=False,help_text="0-default,1-Trending")
-    created_at=models.DateTimeField(auto_now_add=True)
+    name = models.CharField(max_length=150, null=False, blank=False)
+    image = models.ImageField(upload_to=getFileName, blank=True, null=True)  # ✅ Use function, not string
+    description = models.TextField(max_length=500, null=False, blank=False)
+    status = models.BooleanField(default=False, help_text="0-default,1-Hidden")
+    trending = models.BooleanField(default=False, help_text="0-default,1-Trending")
+    created_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self) :
         return self.name
