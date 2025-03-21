@@ -8,7 +8,8 @@ ShopKart | Online Shopping
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h4 class="mb-3">  {{products}} Details</h4>
+        {% comment %} product name {% endcomment %}
+        <h4 class="mb-3">  {{products}} </h4> 
         <hr style="border-color:#b8bfc2;">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
@@ -19,7 +20,8 @@ ShopKart | Online Shopping
         </nav>
         {% comment %} {% include 'shop/inc/message.html' %} {% endcomment %}
       </div>
-
+      
+      {% comment %} Trending logo {% endcomment %}
       <div class="col-4 my-3 trend-box">
         {% if products.trending %}
           <div class="trending">Hot</div>
@@ -28,7 +30,8 @@ ShopKart | Online Shopping
             class="card-img-top product-image" 
             alt="{{ products.name }}">
       </div>
-
+      
+      {% comment %} Product details {% endcomment %}
       <div class="col-8 my-3">
         <h5 class="text-success">{{products | upper}}</h5>
         <p>{{products.vendor}}</p>
@@ -38,7 +41,6 @@ ShopKart | Online Shopping
         <div class="my-3">
           {% if products.quantity > 0 %}
           <input type="hidden" value="{{products.id}}" id="pid">
-          
             <p>
               <div class="input-group" style="width:150px">
                 <button class="input-group-text bg-success text-light" id="btnMinus" ><i class="fa fa-minus"></i></button>
