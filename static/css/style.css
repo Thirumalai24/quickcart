@@ -31,7 +31,28 @@ a{
     border-radius: 5px;
     margin-bottom: 2px;
 }
-  
-.pic-box {
+
+.trend-box {
     position: relative;
+}
+
+.trending {
+  background-color: orangered;
+  color: white;
+  width: 50px;
+  text-align: center;
+  font-weight: bold;
+  display: inline;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  z-index: 10;
+}
+.product-image {
+    height: 250px;
+    object-fit: contain;
+    width: 100%;
+    padding: 10px;
 }
