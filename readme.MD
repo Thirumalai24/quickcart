@@ -1,19 +1,19 @@
-
+---
 ## 🛒 QuickCart – Django E-commerce Website
 
-QuickCart is a fully functional e-commerce website built using Django, inspired by the blog project tutorial from [Tutor Joe's](https://www.tutorjoes.in/python_django_blog/index). It allows users to browse products, add them to a cart, and securely place orders — all with a clean Bootstrap frontend.
+QuickCart is a fully functional e-commerce website built using Django. It allows users to browse products, add them to a cart, and securely place orders — all with a clean Bootstrap frontend.
 
 ---
 
 ### 🔥 Features
 
-- User registration and login
-- Product listing with categories
-- Add to cart / remove from cart
-- Checkout system
-- Order summary
-- Responsive UI using Bootstrap 5
-- Admin panel to manage products and orders
+- User registration and login  
+- Product listing with categories  
+- Add to cart / remove from cart  
+- Checkout system  
+- Order summary  
+- Responsive UI using Bootstrap 5  
+- Admin panel to manage products and orders  
 
 ---
 
@@ -48,14 +48,28 @@ source venv/bin/activate  # For Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-#### 4. Apply migrations and run the server
+#### 4. Configure environment variables
+
+Create a `.env` file in the root directory and add the following:
+
+```env
+DB_NAME=your_database_name
+DB_USER=your_database_username
+DB_PASSWORD=your_database_password
+DB_HOST=localhost
+DB_PORT=3306
+```
+
+> 🔐 **Note:** Do not commit your `.env` file to version control.
+
+#### 5. Apply migrations and run the server
 
 ```bash
 python manage.py migrate
 python manage.py runserver
 ```
 
-#### 5. Access the site
+#### 6. Access the site
 
 Open your browser and go to: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
@@ -81,11 +95,9 @@ quickcart/
 ├── templates/           # HTML templates
 ├── shop/                # Main app (views, models, urls)
 ├── media/               # Uploaded product images
-├── mysql                # Database
+├── mysql/               # MySQL-related files (if any)
 └── manage.py
 ```
 
 ---
-
-
 

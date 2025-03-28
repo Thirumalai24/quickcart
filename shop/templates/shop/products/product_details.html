@@ -117,10 +117,31 @@ ShopKart | Online Shopping
         alert("Please Enter The Quantity");
       }
     });
+
+    btnFav.addEventListener("click", function() {
+     
+      let postObj = { 
+          'pid': pid.value
+      }
+      console.log(postObj);
+      fetch("/fav",{
+        method: 'POST',
+        credentials: 'same-origin',
+        headers:{
+            'Accept': 'application/json',
+            'X-Requested-With': 'XMLHttpRequest',
+            'X-CSRFToken': '{{ csrf_token }}',
+        },
+        body: JSON.stringify(postObj)
+      }).then(response => {
+        return response.json();
+      }).then(data => {
+        //console.log(data);
+        alert(data['status']);
+      });
+    
+    });
   
-
-
-
 });
    </script>
 
