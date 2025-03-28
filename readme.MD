@@ -1,8 +1,3 @@
-Great! Since you've completed your **Django e-commerce project** using the reference from Tutor Joe's website, I’ll help you create a clean and professional **`README.md`** file.
-
-Here’s a ready-to-use template for your project — **QuickCart**:
-
----
 
 ## 🛒 QuickCart – Django E-commerce Website
 
@@ -26,7 +21,7 @@ QuickCart is a fully functional e-commerce website built using Django, inspired 
 
 - **Backend:** Django (Python)
 - **Frontend:** HTML, CSS, Bootstrap
-- **Database:** SQLite3 (default Django DB)
+- **Database:** MySQL
 - **Other:** Font Awesome, Django admin
 
 ---
@@ -92,15 +87,5 @@ quickcart/
 
 ---
 
-### 🙏 Credits
 
-This project is built with guidance from [Tutor Joe's Django Blog Tutorial](https://www.tutorjoes.in/python_django_blog/index). A big thanks to them for providing such an excellent learning resource!
-
----
-
-### 📜 License
-
-This project is for educational purposes. You can modify and use it as per your needs.
-
----
 
