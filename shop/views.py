@@ -112,7 +112,7 @@ def remove_cart(request,cid):
   return redirect("/cart")
 
 # Add to Favorite
-def fav_page(request):
+def add_to_fav(request):
    if request.headers.get('x-requested-with')=='XMLHttpRequest':
     if request.user.is_authenticated:
       data=json.load(request)
@@ -130,7 +130,7 @@ def fav_page(request):
     return JsonResponse({'status':'Invalid Access'}, status=200)
 
 # Favorite Page 
-def favviewpage(request):
+def fav_view_page(request):
   if request.user.is_authenticated:
     fav=Favourite.objects.filter(user=request.user)
     return render(request,"shop/fav.html",{"fav":fav})
