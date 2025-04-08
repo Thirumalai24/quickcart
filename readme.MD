@@ -31,7 +31,7 @@ QuickCart is a fully functional e-commerce website built using Django. It allows
 #### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/quickcart.git
+git clone https://github.com/Thirumalai24/quickcart.git
 cd quickcart
 ```
 
